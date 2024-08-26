@@ -1,6 +1,6 @@
 package source.game;
 
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import source.engine.Entity;
 import source.engine.Texture;
@@ -17,8 +17,8 @@ public class Background extends Entity
     }
     
     @Override
-    public void draw(Graphics graphics)
+    public void draw(Graphics2D graphics)
     {
-        graphics.drawImage(texture.getImage(), 50, 50, 800, 800, null);
+        graphics.drawImage(texture.getImage(), 0, 0, 900, 900, null);
     }
 }

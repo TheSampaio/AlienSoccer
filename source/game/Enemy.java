@@ -8,12 +8,12 @@ import source.engine.Keyboard;
 import source.engine.Texture;
 import source.engine.Transform;
 
-public class Player extends Actor
+public class Enemy extends Actor
 {
     private Texture texture;
     private int speed = 8;
 
-    public Player(Texture texture, Transform transform)
+    public Enemy(Texture texture, Transform transform)
     {
         super(transform);
         this.texture = texture;
@@ -23,16 +23,16 @@ public class Player extends Actor
     public void tick()
     {
         // Inputs
-        if (Input.getKeyPress(Keyboard.W))
+        if (Input.getKeyPress(Keyboard.Up))
             translate(0, -speed);
 
-        if (Input.getKeyPress(Keyboard.S))
+        if (Input.getKeyPress(Keyboard.Down))
             translate(0, speed);
 
-        if (Input.getKeyPress(Keyboard.D))  
+        if (Input.getKeyPress(Keyboard.Right))  
             translate(speed, 0);
 
-        if (Input.getKeyPress(Keyboard.A))
+        if (Input.getKeyPress(Keyboard.Left))
             translate(-speed, 0);
 
         // Screen position
@@ -55,7 +55,7 @@ public class Player extends Actor
     @Override
     public void draw(Graphics2D graphics)
     {
-        graphics.drawImage(texture.getTile(0, 50, 22, 24),
+        graphics.drawImage(texture.getTile(88, 0, 22, 24),
         getLocation().x,
         getLocation().y,
         getSize().x,
