@@ -1,8 +1,7 @@
 package source.engine;
 
 import java.awt.Canvas;
-import java.awt.Graphics;
-// import java.awt.event.KeyListener;
+import java.awt.Graphics2D;
 
 import javax.swing.JFrame;
 
@@ -39,9 +38,9 @@ public class Game extends JFrame implements Runnable
     }
 
     @Override
-    public Graphics getGraphics()
+    public Graphics2D getGraphics()
     {
-        return renderer.getGraphics();
+        return (Graphics2D) renderer.getGraphics();
     }
 
     @Override

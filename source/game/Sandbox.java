@@ -33,31 +33,16 @@ public class Sandbox extends Game
         // Background
         scene.add(new Background(texBackgrounds, new Transform(0, 0)));
         
-        // Blocks
+        // Constants
         final int WIDTH = getWidth();
         final int HEIGHT = getHeight();
         final int SIZE = 50;
-        final int ROWS = HEIGHT / SIZE;
-        final int COLUMNS = WIDTH / SIZE;
 
-        // Top
-        for (int i = 0; i < COLUMNS - 1; i++)
-            scene.add(new Block(texProps, new Transform(SIZE * i, 0)), false);
-
-        // Bottom
-        for (int i = 0; i < COLUMNS; i++)
-            scene.add(new Block(texProps, new Transform(SIZE * i, HEIGHT - SIZE)), false);
-
-        // Right
-        for (int i = 0; i < ROWS - 1; i++)
-            scene.add(new Block(texProps, new Transform(WIDTH - SIZE, SIZE * i)), false);
-
-        // Left
-        for (int i = 1; i < ROWS - 1; i++)
-            scene.add(new Block(texProps, new Transform(0, SIZE * i)), false);
-
-        // Player
+        // Player 1
         scene.add(new Player(texCharacters, new Transform((WIDTH / 2) - (SIZE / 2), (HEIGHT / 2) - (SIZE / 2) + 125)), true);
+
+        // Player 2
+        scene.add(new Enemy(texCharacters, new Transform((WIDTH / 2) - (SIZE / 2), (HEIGHT / 2) - (SIZE / 2) - 125)), true);
 
         // Ball
         scene.add(new Ball(texProps, new Transform((WIDTH / 2) - 12, (HEIGHT / 2) - 12)), true);

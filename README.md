@@ -5,6 +5,6 @@
     <img src="data/image/showcase.jpg" width=850>
 <h2>Credits</h2>
 <section>
-    All assets that I used in this project are CC0, however, I prefer to give the authors credit for their creations.<br>
+    All assets that I used in this project are under CC0 license, however, I prefer to give the authors credit for their creations.<br>
     • Spites: <a href="https://www.kenney.nl/">Kenney</a>
 </section>

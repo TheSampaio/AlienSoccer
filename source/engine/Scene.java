@@ -1,6 +1,6 @@
 package source.engine;
 
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -46,7 +46,7 @@ public class Scene
             statics.get(i).tick();
     }
 
-    public void draw(Graphics graphics)
+    public void draw(Graphics2D graphics)
     {
         for (int i = 0; i < entities.size(); i++)
             entities.get(i).draw(graphics);

@@ -1,6 +1,6 @@
 package source.engine;
 
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 
 public class Entity
@@ -27,7 +27,7 @@ public class Entity
     {
     }
     
-    public void draw(Graphics graphics)
+    public void draw(Graphics2D graphics)
     {
     }
 

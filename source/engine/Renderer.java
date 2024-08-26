@@ -3,13 +3,13 @@ package source.engine;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 
 public class Renderer
 {
     private BufferStrategy bufferStrategy;
-    private Graphics graphics;
+    private Graphics2D graphics;
     private Canvas canvas;
 
     public Renderer(int width, int height)
@@ -23,20 +23,20 @@ public class Renderer
         return canvas;
     }
 
-    public Graphics getGraphics()
+    public Graphics2D getGraphics()
     {
         return graphics;
     }
 
     public void createFramebuffer()
     {
-        canvas.createBufferStrategy(2);
+        canvas.createBufferStrategy(3);
     }
 
     public void clear()
     {
         bufferStrategy = canvas.getBufferStrategy();
-        graphics = bufferStrategy.getDrawGraphics();
+        graphics = (Graphics2D) bufferStrategy.getDrawGraphics();
 
         graphics.setColor(Color.BLACK);
         graphics.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
